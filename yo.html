@@ -6,13 +6,14 @@
 	<title>Ana Lizarazo | Mi perfil</title>
 	<style>
 		:root {
-			--azul: #173f5f;
-			--azul-claro: #20639b;
-			--turquesa: #3caea3;
-			--amarillo: #f6d55c;
-			--coral: #ed553b;
-			--crema: #fffaf0;
-			--tinta: #183642;
+			--azul: #182848;
+			--azul-claro: #5578a8;
+			--azul-suave: #dce9f7;
+			--morado: #4b326d;
+			--morado-claro: #d9c9ed;
+			--dorado: #c89b3c;
+			--crema: #fbf5e9;
+			--tinta: #29243a;
 			--blanco: #ffffff;
 		}
 
@@ -34,7 +35,7 @@
 			min-height: 430px;
 			padding: 28px 8% 72px;
 			color: var(--blanco);
-			background: var(--azul);
+			background: linear-gradient(120deg, var(--azul) 0%, var(--morado) 100%);
 		}
 
 		header::before,
@@ -49,7 +50,7 @@
 			height: 270px;
 			right: -70px;
 			top: -80px;
-			background: var(--turquesa);
+			background: var(--azul-claro);
 			opacity: 0.85;
 		}
 
@@ -58,7 +59,7 @@
 			height: 180px;
 			right: 17%;
 			bottom: -95px;
-			background: var(--amarillo);
+			background: var(--dorado);
 		}
 
 		nav {
@@ -72,7 +73,7 @@
 		}
 
 		.marca {
-			color: var(--amarillo);
+			color: var(--dorado);
 			font-size: 1.15rem;
 			font-weight: bold;
 			letter-spacing: 0.08em;
@@ -100,7 +101,7 @@
 
 		.etiqueta {
 			margin: 0 0 10px;
-			color: var(--amarillo);
+			color: var(--dorado);
 			font-family: Arial, sans-serif;
 			font-size: 0.85rem;
 			font-weight: bold;
@@ -125,7 +126,7 @@
 		.intro {
 			max-width: 560px;
 			margin: 0;
-			color: #e7f2f4;
+			color: var(--azul-suave);
 			font-size: 1.2rem;
 		}
 
@@ -136,11 +137,11 @@
 			justify-content: center;
 			align-items: center;
 			justify-self: end;
-			border: 2px solid var(--amarillo);
+			border: 2px solid var(--dorado);
 			border-radius: 50%;
-			outline: 12px solid rgba(60, 174, 163, 0.25);
+			outline: 12px solid rgba(217, 201, 237, 0.28);
 			color: var(--azul);
-			background: var(--amarillo);
+			background: var(--dorado);
 			text-align: center;
 			transform: rotate(7deg);
 		}
@@ -176,11 +177,11 @@
 			gap: 28px;
 			align-items: baseline;
 			margin-bottom: 28px;
-			border-bottom: 2px solid var(--amarillo);
+			border-bottom: 2px solid var(--dorado);
 		}
 
 		.numero {
-			color: var(--coral);
+			color: var(--morado);
 			font-family: Arial, sans-serif;
 			font-size: 0.9rem;
 			font-weight: bold;
@@ -203,6 +204,66 @@
 			font-size: 1.15rem;
 		}
 
+		.recorrido {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 18px;
+		}
+
+		.etapa {
+			min-height: 210px;
+			padding: 24px;
+			border: 1px solid var(--morado-claro);
+			background: var(--blanco);
+		}
+
+		.etapa .periodo {
+			color: var(--dorado);
+			font-family: Arial, sans-serif;
+			font-size: 0.8rem;
+			font-weight: bold;
+			letter-spacing: 0.12em;
+			text-transform: uppercase;
+		}
+
+		.etapa h3 {
+			margin: 22px 0 10px;
+			color: var(--morado);
+			font-size: 1.45rem;
+		}
+
+		.etapa p {
+			margin: 0;
+			font-family: Arial, sans-serif;
+			font-size: 0.94rem;
+		}
+
+		.fortalezas {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 24px;
+		}
+
+		.fortaleza {
+			padding: 26px;
+			background: var(--azul-suave);
+		}
+
+		.fortaleza:nth-child(2) {
+			background: var(--morado-claro);
+		}
+
+		.fortaleza h3 {
+			margin-bottom: 10px;
+			color: var(--azul);
+			font-size: 1.45rem;
+		}
+
+		.fortaleza p {
+			margin: 0;
+			font-size: 1.03rem;
+		}
+
 		.datos {
 			display: grid;
 			gap: 14px;
@@ -212,7 +273,7 @@
 
 		.dato {
 			padding: 16px 18px;
-			border-left: 5px solid var(--turquesa);
+			border-left: 5px solid var(--azul-claro);
 			background: var(--blanco);
 		}
 
@@ -239,20 +300,20 @@
 		.interes {
 			min-height: 150px;
 			padding: 22px 18px;
-			border-top: 6px solid var(--coral);
+			border-top: 6px solid var(--morado);
 			background: var(--blanco);
 		}
 
 		.interes:nth-child(2) {
-			border-color: var(--turquesa);
+			border-color: var(--azul-claro);
 		}
 
 		.interes:nth-child(3) {
-			border-color: var(--amarillo);
+			border-color: var(--dorado);
 		}
 
 		.interes:nth-child(4) {
-			border-color: var(--azul-claro);
+			border-color: var(--morado-claro);
 		}
 
 		.interes h3 {
@@ -269,12 +330,12 @@
 
 		.meta {
 			display: grid;
-			grid-template-columns: 0.8fr 1.2fr;
+			grid-template-columns: 0.1fr 0.9fr 1.4fr;
 			gap: 28px;
 			align-items: center;
 			padding: 34px;
 			color: var(--blanco);
-			background: var(--coral);
+			background: var(--morado);
 		}
 
 		.meta h2 {
@@ -312,6 +373,8 @@
 
 			.presentacion,
 			.sobre-mi,
+			.recorrido,
+			.fortalezas,
 			.meta {
 				grid-template-columns: 1fr;
 			}
@@ -402,9 +465,33 @@
 			</div>
 		</section>
 
-		<section id="intereses">
+		<section id="recorrido">
 			<div class="encabezado-seccion">
 				<span class="numero">02</span>
+				<h2>Mi recorrido</h2>
+			</div>
+			<div class="recorrido">
+				<article class="etapa">
+					<span class="periodo">Formación escolar</span>
+					<h3>Colegio José Elías Puyana</h3>
+					<p>En esta etapa construí las bases de mi formación y descubrí el interés por seguir aprendiendo y plantearme nuevos desafíos.</p>
+				</article>
+				<article class="etapa">
+					<span class="periodo">Etapa actual</span>
+					<h3>Universidad Industrial de Santander</h3>
+					<p>Actualmente estudio Ingeniería en Inteligencia Artificial y sigo fortaleciendo mis conocimientos para comprender mejor el mundo de la tecnología.</p>
+				</article>
+				<article class="etapa">
+					<span class="periodo">Próximo capítulo</span>
+					<h3>Aprender para aportar</h3>
+					<p>Quiero convertir lo aprendido en soluciones responsables, útiles y cercanas a las necesidades de las personas.</p>
+				</article>
+			</div>
+		</section>
+
+		<section id="intereses">
+			<div class="encabezado-seccion">
+				<span class="numero">03</span>
 				<h2>Lo que disfruto</h2>
 			</div>
 			<div class="intereses">
@@ -427,9 +514,27 @@
 			</div>
 		</section>
 
+		<section id="fortalezas">
+			<div class="encabezado-seccion">
+				<span class="numero">04</span>
+				<h2>Lo que me impulsa</h2>
+			</div>
+			<div class="fortalezas">
+				<article class="fortaleza">
+					<h3>Curiosidad y creatividad</h3>
+					<p>Me gusta hacer preguntas, explorar ideas y buscar diferentes formas de entender un problema. Creo que la creatividad es una parte importante de la tecnología.</p>
+				</article>
+				<article class="fortaleza">
+					<h3>Compromiso con la sociedad</h3>
+					<p>Mi propósito es que mis conocimientos tengan un sentido humano. Quiero participar en proyectos que aporten bienestar, seguridad y nuevas oportunidades.</p>
+				</article>
+			</div>
+		</section>
+
 		<section id="meta" class="meta">
+			<span class="numero">05</span>
 			<h2>Hacia dónde voy</h2>
-			<p>Mi objetivo es graduarme de Ingeniería en Inteligencia Artificial y especializarme en ciberseguridad o imágenes médicas. Quiero aportar mi trabajo a la sociedad y usar mis conocimientos para construir soluciones que tengan un impacto positivo.</p>
+			<p>Mi objetivo es graduarme de Ingeniería en Inteligencia Artificial y especializarme en ciberseguridad o imágenes médicas. Quiero aportar mi trabajo a la sociedad y usar mis conocimientos para construir soluciones que tengan un impacto positivo, ético y transformador.</p>
 		</section>
 	</main>
 
