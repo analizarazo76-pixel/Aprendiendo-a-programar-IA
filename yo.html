@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ana Lizarazo | Mi perfil</title>
+	<style>
+		:root {
+			--azul: #173f5f;
+			--azul-claro: #20639b;
+			--turquesa: #3caea3;
+			--amarillo: #f6d55c;
+			--coral: #ed553b;
+			--crema: #fffaf0;
+			--tinta: #183642;
+			--blanco: #ffffff;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+			color: var(--tinta);
+			background: var(--crema);
+			font-family: Georgia, "Times New Roman", serif;
+			line-height: 1.6;
+		}
+
+		header {
+			position: relative;
+			overflow: hidden;
+			min-height: 430px;
+			padding: 28px 8% 72px;
+			color: var(--blanco);
+			background: var(--azul);
+		}
+
+		header::before,
+		header::after {
+			position: absolute;
+			border-radius: 50%;
+			content: "";
+		}
+
+		header::before {
+			width: 270px;
+			height: 270px;
+			right: -70px;
+			top: -80px;
+			background: var(--turquesa);
+			opacity: 0.85;
+		}
+
+		header::after {
+			width: 180px;
+			height: 180px;
+			right: 17%;
+			bottom: -95px;
+			background: var(--amarillo);
+		}
+
+		nav {
+			position: relative;
+			z-index: 1;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			max-width: 1100px;
+			margin: 0 auto;
+		}
+
+		.marca {
+			color: var(--amarillo);
+			font-size: 1.15rem;
+			font-weight: bold;
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+		}
+
+		nav a {
+			margin-left: 24px;
+			color: var(--blanco);
+			font-family: Arial, sans-serif;
+			font-size: 0.9rem;
+			text-decoration: none;
+		}
+
+		.presentacion {
+			position: relative;
+			z-index: 1;
+			display: grid;
+			grid-template-columns: minmax(0, 1.2fr) minmax(220px, 0.8fr);
+			gap: 50px;
+			align-items: center;
+			max-width: 1100px;
+			margin: 70px auto 0;
+		}
+
+		.etiqueta {
+			margin: 0 0 10px;
+			color: var(--amarillo);
+			font-family: Arial, sans-serif;
+			font-size: 0.85rem;
+			font-weight: bold;
+			letter-spacing: 0.16em;
+			text-transform: uppercase;
+		}
+
+		h1,
+		h2,
+		h3 {
+			margin-top: 0;
+			line-height: 1.1;
+		}
+
+		h1 {
+			max-width: 650px;
+			margin-bottom: 18px;
+			font-size: clamp(3.2rem, 8vw, 6.4rem);
+			font-weight: normal;
+		}
+
+		.intro {
+			max-width: 560px;
+			margin: 0;
+			color: #e7f2f4;
+			font-size: 1.2rem;
+		}
+
+		.sello {
+			display: flex;
+			width: 220px;
+			height: 220px;
+			justify-content: center;
+			align-items: center;
+			justify-self: end;
+			border: 2px solid var(--amarillo);
+			border-radius: 50%;
+			outline: 12px solid rgba(60, 174, 163, 0.25);
+			color: var(--azul);
+			background: var(--amarillo);
+			text-align: center;
+			transform: rotate(7deg);
+		}
+
+		.sello strong {
+			display: block;
+			font-size: 4.2rem;
+			line-height: 0.9;
+		}
+
+		.sello span {
+			display: block;
+			font-family: Arial, sans-serif;
+			font-size: 0.78rem;
+			font-weight: bold;
+			letter-spacing: 0.12em;
+			text-transform: uppercase;
+		}
+
+		main {
+			max-width: 1100px;
+			margin: 0 auto;
+			padding: 72px 8%;
+		}
+
+		section {
+			margin-bottom: 78px;
+			scroll-margin-top: 24px;
+		}
+
+		.encabezado-seccion {
+			display: flex;
+			gap: 28px;
+			align-items: baseline;
+			margin-bottom: 28px;
+			border-bottom: 2px solid var(--amarillo);
+		}
+
+		.numero {
+			color: var(--coral);
+			font-family: Arial, sans-serif;
+			font-size: 0.9rem;
+			font-weight: bold;
+		}
+
+		h2 {
+			color: var(--azul);
+			font-size: 2.5rem;
+			font-weight: normal;
+		}
+
+		.sobre-mi {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 50px;
+		}
+
+		.sobre-mi p {
+			margin: 0;
+			font-size: 1.15rem;
+		}
+
+		.datos {
+			display: grid;
+			gap: 14px;
+			align-content: start;
+			margin: 0;
+		}
+
+		.dato {
+			padding: 16px 18px;
+			border-left: 5px solid var(--turquesa);
+			background: var(--blanco);
+		}
+
+		.dato dt {
+			color: var(--azul-claro);
+			font-family: Arial, sans-serif;
+			font-size: 0.75rem;
+			font-weight: bold;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+		}
+
+		.dato dd {
+			margin: 2px 0 0;
+			font-size: 1.08rem;
+		}
+
+		.intereses {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 16px;
+		}
+
+		.interes {
+			min-height: 150px;
+			padding: 22px 18px;
+			border-top: 6px solid var(--coral);
+			background: var(--blanco);
+		}
+
+		.interes:nth-child(2) {
+			border-color: var(--turquesa);
+		}
+
+		.interes:nth-child(3) {
+			border-color: var(--amarillo);
+		}
+
+		.interes:nth-child(4) {
+			border-color: var(--azul-claro);
+		}
+
+		.interes h3 {
+			margin-bottom: 8px;
+			color: var(--azul);
+			font-size: 1.35rem;
+		}
+
+		.interes p {
+			margin: 0;
+			font-family: Arial, sans-serif;
+			font-size: 0.92rem;
+		}
+
+		.meta {
+			display: grid;
+			grid-template-columns: 0.8fr 1.2fr;
+			gap: 28px;
+			align-items: center;
+			padding: 34px;
+			color: var(--blanco);
+			background: var(--coral);
+		}
+
+		.meta h2 {
+			margin: 0;
+			color: var(--blanco);
+		}
+
+		.meta p {
+			margin: 0;
+			font-size: 1.13rem;
+		}
+
+		footer {
+			padding: 24px 8%;
+			color: var(--blanco);
+			background: var(--azul);
+			font-family: Arial, sans-serif;
+			font-size: 0.85rem;
+			text-align: center;
+		}
+
+		@media (max-width: 760px) {
+			header {
+				min-height: auto;
+				padding: 24px 7% 64px;
+			}
+
+			nav {
+				align-items: flex-start;
+			}
+
+			nav div:last-child {
+				display: none;
+			}
+
+			.presentacion,
+			.sobre-mi,
+			.meta {
+				grid-template-columns: 1fr;
+			}
+
+			.presentacion {
+				gap: 34px;
+				margin-top: 60px;
+			}
+
+			.sello {
+				width: 150px;
+				height: 150px;
+				justify-self: start;
+			}
+
+			.sello strong {
+				font-size: 2.8rem;
+			}
+
+			main {
+				padding: 54px 7%;
+			}
+
+			.intereses {
+				grid-template-columns: 1fr 1fr;
+			}
+		}
+
+		@media (max-width: 440px) {
+			.intereses {
+				grid-template-columns: 1fr;
+			}
+
+			h2 {
+				font-size: 2rem;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<nav aria-label="Navegación principal">
+			<div class="marca">AL / Perfil personal</div>
+			<div>
+				<a href="#sobre-mi">Sobre mí</a>
+				<a href="#intereses">Intereses</a>
+				<a href="#meta">Mi meta</a>
+			</div>
+		</nav>
+
+		<div class="presentacion">
+			<div>
+				<p class="etiqueta">Hola, soy</p>
+				<h1>Ana<br>Lizarazo</h1>
+				<p class="intro">Estudiante de Ingeniería en Inteligencia Artificial, con curiosidad por la tecnología y ganas de crear un futuro con propósito.</p>
+			</div>
+			<div class="sello" aria-label="17 años">
+				<div>
+					<strong>17</strong>
+					<span>años de ideas</span>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<section id="sobre-mi">
+			<div class="encabezado-seccion">
+				<span class="numero">01</span>
+				<h2>Un poco sobre mí</h2>
+			</div>
+			<div class="sobre-mi">
+				<p>Soy de Floridablanca y actualmente estudio en la Universidad Industrial de Santander. Elegí la Ingeniería en Inteligencia Artificial porque me emociona aprender cómo la tecnología puede entender problemas, encontrar soluciones y transformar la vida de las personas.</p>
+				<dl class="datos">
+					<div class="dato">
+						<dt>Ciudad</dt>
+						<dd>Floridablanca, Santander</dd>
+					</div>
+					<div class="dato">
+						<dt>Universidad</dt>
+						<dd>Universidad Industrial de Santander</dd>
+					</div>
+					<div class="dato">
+						<dt>Estudios anteriores</dt>
+						<dd>Colegio José Elías Puyana</dd>
+					</div>
+				</dl>
+			</div>
+		</section>
+
+		<section id="intereses">
+			<div class="encabezado-seccion">
+				<span class="numero">02</span>
+				<h2>Lo que disfruto</h2>
+			</div>
+			<div class="intereses">
+				<article class="interes">
+					<h3>01 / Música</h3>
+					<p>Escuchar música acompaña mis días y me ayuda a encontrar inspiración.</p>
+				</article>
+				<article class="interes">
+					<h3>02 / Videojuegos</h3>
+					<p>Me gustan los retos, las historias y los mundos que se descubren jugando.</p>
+				</article>
+				<article class="interes">
+					<h3>03 / Anime</h3>
+					<p>Disfruto sus personajes, sus universos y la creatividad de cada historia.</p>
+				</article>
+				<article class="interes">
+					<h3>04 / K-dramas</h3>
+					<p>Me encantan sus tramas, emociones y la forma en que cuentan cada historia.</p>
+				</article>
+			</div>
+		</section>
+
+		<section id="meta" class="meta">
+			<h2>Hacia dónde voy</h2>
+			<p>Mi objetivo es graduarme de Ingeniería en Inteligencia Artificial y especializarme en ciberseguridad o imágenes médicas. Quiero aportar mi trabajo a la sociedad y usar mis conocimientos para construir soluciones que tengan un impacto positivo.</p>
+		</section>
+	</main>
+
+	<footer>
+		Ana Lizarazo · Ingeniería en Inteligencia Artificial · Floridablanca
+	</footer>
+</body>
+</html>
